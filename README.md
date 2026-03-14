@@ -23,10 +23,6 @@ Image / PDF → OCR → AI Structuring → JSON → CSV Export
 - Uses **OpenRouter LLM API**
 - Converts messy OCR text into **structured JSON**
 
-### 🤖 Architecture Diagram
-
-
-
 ### 📊 Invoice Table Extraction
 Extracts fields like:
 
