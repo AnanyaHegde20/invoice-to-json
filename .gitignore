@@ -1,0 +1,7 @@
+node_modules/
+ocr_env/
+uploads/
+.env
+dist/
+build/
+.vscode/
