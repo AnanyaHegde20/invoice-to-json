@@ -235,6 +235,7 @@ Quantity
 Unit Price
 Item Total
 
+```
 📂 Project Structure
 │invoice-to-json
 │
@@ -273,7 +274,7 @@ Item Total
 ├── tsconfig.json
 ├── .env
 └── README.md
-
+```
 ⚠️ Common Errors
 PaddleOCR / numpy conflicts
 
