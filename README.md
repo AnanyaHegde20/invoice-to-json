@@ -23,6 +23,9 @@ Image / PDF → OCR → AI Structuring → JSON → CSV Export
 - Uses **OpenRouter LLM API**
 - Converts messy OCR text into **structured JSON**
 
+### 🤖 Architecture Diagram
+
+
 ### 📊 Invoice Table Extraction
 Extracts fields like:
 
@@ -97,7 +100,7 @@ Check installation:
 node -v
 npm -v
 
-2️⃣ Install Python 3.10+
+## 2️⃣ Install Python 3.10+
 
 Download:
 
@@ -108,9 +111,9 @@ Check installation:
 python --version
 pip --version
 
-3️⃣ Setup Python Virtual Environment
+## 3️⃣ Setup Python Virtual Environment
 
-Create virtual environment:
+## Create virtual environment:
 
 python -m venv ocr_env
 
@@ -126,13 +129,13 @@ Upgrade pip:
 
 python -m pip install --upgrade pip
 
-Install dependencies:
+## Install dependencies:
 
 pip install -r requirements.txt
 
 📄 Install Poppler (Required for PDF)
 
-Download Poppler:
+## Download Poppler:
 
 http://blog.alivate.com.au/poppler-windows/
 
@@ -153,7 +156,7 @@ OPENROUTER_API_KEY=your_api_key_here
 AI_MODEL=google/gemini-3.1-flash-lite-preview
 PORT=5000
 
-You can change models easily by modifying:
+## You can change models easily by modifying:
 
 AI_MODEL
 
@@ -161,9 +164,9 @@ Example:
 
 AI_MODEL=mistralai/mistral-nemo:free
 
-▶️ Run the Project
+## ▶️ Run the Project
 
-1️⃣ Start Backend Server
+## 1️⃣ Start Backend Server
 
 From project root:
 
@@ -173,15 +176,15 @@ Server will start at:
 
 http://localhost:5000
 
-2️⃣ Start Frontend (React)
+## 2️⃣ Start Frontend (React)
 
-Navigate to frontend folder:
+## Navigate to frontend folder:
 
 cd frontend
 npm install
 npm run dev
 
-Frontend runs at:
+## Frontend runs at:
 
 http://localhost:5173
 📤 API Endpoint
@@ -213,7 +216,7 @@ Response:
   ]
 }
 
-📊 CSV Export (NEW)
+## 📊 CSV Export (NEW)
 
 After extraction, users can:
 
@@ -275,7 +278,7 @@ Item Total
 ├── .env
 └── README.md
 ```
-⚠️ Common Errors
+## ⚠️ Common Errors
 PaddleOCR / numpy conflicts
 
 Use exact versions from requirements.txt.
@@ -293,7 +296,7 @@ AI_MODEL
 
 in .env.
 
-💡 Future Improvements
+## 💡 Future Improvements
 
 Multi-page PDF support
 
@@ -311,7 +314,7 @@ Drag-and-drop upload
 
 Invoice analytics dashboard
 
-⭐ Project Summary
+## ⭐ Project Summary
 
 Smart Invoice Extractor is a full-stack AI application that converts invoices into structured data using:
 
