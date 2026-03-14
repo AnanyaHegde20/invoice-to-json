@@ -236,25 +236,42 @@ Unit Price
 Item Total
 
 📂 Project Structure
-invoice-to-json/
+│invoice-to-json
 │
-├── src/
+├── src
 │   ├── server.ts
 │   ├── temp/
 │   └── output/
 │
-├── frontend/                # React UI
-│   ├── src/
+├── frontend
+│   ├── node_modules/
+│   ├── src
 │   │   ├── components/
-│   │   │   ├── InvoiceExtractor.jsx
-│   │   │   └── SplashScreen.jsx
+│   │   │                  ├── InvoiceExtractor.jsx
+│   │   │                  └── SplashScreen.jsx
+│   │   ├── App.jsx
+│   │   ├── index.css
 │   │   └── main.jsx
+│   │
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── eslint.config.js
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
 │
-├── ocr.py                   # Python OCR script
+├── ocr_env/
+│
+├── output/
+│
+├── ocr.py
+├── eng.traineddata
 ├── requirements.txt
-├── .env
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
+├── .env
 └── README.md
 
 ⚠️ Common Errors
