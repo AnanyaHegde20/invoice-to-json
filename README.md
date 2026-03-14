@@ -26,6 +26,7 @@ Image / PDF → OCR → AI Structuring → JSON → CSV Export
 ### 🤖 Architecture Diagram
 
 
+
 ### 📊 Invoice Table Extraction
 Extracts fields like:
 
