@@ -93,7 +93,7 @@ https://nodejs.org/
 
 Check installation:
 
-```bash
+
 node -v
 npm -v
 
