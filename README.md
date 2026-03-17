@@ -11,190 +11,305 @@ Image / PDF → OCR → AI Structuring → JSON → CSV Export
 # 🚀 Features
 
 ### 📥 File Upload
-- Upload **PNG**
-- Upload **JPEG**
-- Upload **PDF**
+
+* Upload **PNG**
+* Upload **JPEG**
+* Upload **PDF**
 
 ### 🔍 OCR Processing
-- Uses **PaddleOCR (Python)** for text extraction
-- Works with **scanned invoices and digital PDFs**
+
+* Uses **PaddleOCR (Python)** for text extraction
+* Works with **scanned invoices and digital PDFs**
 
 ### 🤖 AI Data Structuring
-- Uses **OpenRouter LLM API**
-- Converts messy OCR text into **structured JSON**
+
+* Uses **OpenRouter LLM API**
+* Converts messy OCR text into **structured JSON**
 
 ### 📊 Invoice Table Extraction
+
 Extracts fields like:
 
-- Vendor Name
-- Invoice Number
-- Invoice Date
-- Buyer Name
-- GST Number
-- Total Amount
-- Tax Amount
-- Item Description
-- Quantity
-- Unit Price
-- Item Total
+* Vendor Name
+* Invoice Number
+* Invoice Date
+* Buyer Name
+* GST Number
+* Total Amount
+* Tax Amount
+* Item Description
+* Quantity
+* Unit Price
+* Item Total
 
-### 📁 CSV Export (NEW)
-- Download extracted invoice data as **CSV**
-- One click **Download CSV button**
-- Perfect for Excel / reporting workflows
+### 📁 CSV Export
 
-### 🎨 Modern UI (NEW)
+* Download extracted invoice data as **CSV**
+* One click **Download CSV button**
+* Perfect for Excel / reporting workflows
+
+### 🎨 Modern UI
+
 Frontend built using:
 
-- **React**
-- **TailwindCSS**
-- **Responsive UI**
-- **Syntax highlighted JSON viewer**
-- **Modern cards & gradient UI**
+* **React**
+* **TailwindCSS**
+* **Responsive UI**
+* **Syntax highlighted JSON viewer**
+* **Modern cards & gradient UI**
 
 ### ⚡ Other Features
-- Automatic image compression using **Sharp**
-- Error handling
-- Temporary file cleanup
-- Works for **images and PDFs**
+
+* Automatic image compression using **Sharp**
+* Error handling
+* Temporary file cleanup
+* Works for **images and PDFs**
 
 ---
 
 # 🛠️ Tech Stack
 
 ## Backend
-- Node.js
-- TypeScript
-- Express.js
-- Axios
-- Sharp
-- OpenRouter API
+
+* Node.js
+* TypeScript
+* Express.js
+* Axios
+* Sharp
+* OpenRouter API
 
 ## AI / OCR
-- Python 3.10+
-- PaddleOCR
-- Poppler / pdf2image
 
-## Frontend (NEW)
-- React
-- Vite
-- TailwindCSS
-- Modern responsive UI
+* Python 3.10+
+* PaddleOCR
+* Poppler
+
+## Frontend
+
+* React
+* Vite
+* TailwindCSS
 
 ---
 
-# 📦 Prerequisites
+# 🐧 Ubuntu / WSL Setup (Recommended)
 
-## 1️⃣ Install Node.js (LTS)
+This project is designed to run inside **Ubuntu using Windows Subsystem for Linux (WSL)**.
 
-Download:
+## 1️⃣ Install WSL (Windows)
 
-https://nodejs.org/
+Open **PowerShell as Administrator** and run:
 
-Check installation:
+```
+wsl --install
+```
 
+Restart your computer.
 
-node -v
-npm -v
+After restart, open **Ubuntu** and create your Linux username and password.
 
-## 2️⃣ Install Python 3.10+
+---
 
-Download:
+# 💻 Install VS Code + WSL Extension
 
-https://www.python.org/downloads/
+Install:
 
-Check installation:
+Visual Studio Code
 
-python --version
-pip --version
+Then install extension:
 
-## 3️⃣ Setup Python Virtual Environment
+**Remote - WSL**
 
-## Create virtual environment:
+This allows VS Code to run directly inside Ubuntu.
 
-python -m venv ocr_env
+To open project in WSL:
 
-Activate environment:
+Press:
 
-Windows
-.\ocr_env\Scripts\activate
+```
+Ctrl + Shift + P
+```
 
-macOS / Linux
-source ocr_env/bin/activate
+Then select:
 
-Upgrade pip:
+```
+WSL: Open Folder in WSL
+```
 
-python -m pip install --upgrade pip
+Open your project folder.
 
-## Install dependencies:
+---
 
-pip install -r requirements.txt
+# 📦 Install System Dependencies (Ubuntu)
 
-📄 Install Poppler (Required for PDF)
+Update packages:
 
-## Download Poppler:
+```
+sudo apt update
+```
 
-http://blog.alivate.com.au/poppler-windows/
+Install Node.js:
 
-Steps:
-
-Extract the folder
-Add poppler/bin to System PATH
-Restart computer
+```
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+```
 
 Verify installation:
 
-pdftoppm -version
-⚙️ Environment Setup
+```
+node -v
+npm -v
+```
 
-Create .env file in root:
+Install Python:
 
+```
+sudo apt install python3 python3-pip python3-venv -y
+```
+
+Verify:
+
+```
+python3 --version
+pip3 --version
+```
+
+---
+
+# 📄 Install Poppler (Required for PDF Support)
+
+Poppler converts **PDF → image** before OCR.
+
+Install:
+
+```
+sudo apt install poppler-utils -y
+```
+
+Verify installation:
+
+```
+pdftoppm -v
+```
+
+---
+
+# 🧠 Setup Python OCR Environment
+
+Navigate to project folder:
+
+```
+cd invoice-to-json
+```
+
+Create virtual environment:
+
+```
+python3 -m venv ocr_env
+```
+
+Activate environment:
+
+```
+source ocr_env/bin/activate
+```
+
+Upgrade pip:
+
+```
+python -m pip install --upgrade pip
+```
+
+Install OCR dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+This installs:
+
+* PaddleOCR
+* OpenCV
+* NumPy
+* Image processing libraries
+
+---
+
+# ⚙️ Environment Setup
+
+Create a `.env` file in project root:
+
+```
 OPENROUTER_API_KEY=your_api_key_here
 AI_MODEL=google/gemini-3.1-flash-lite-preview
 PORT=5000
+```
 
-## You can change models easily by modifying:
-
-AI_MODEL
+You can change models easily:
 
 Example:
 
+```
 AI_MODEL=mistralai/mistral-nemo:free
+```
 
-## ▶️ Run the Project
+---
+
+# ▶️ Run the Project
 
 ## 1️⃣ Start Backend Server
 
 From project root:
 
+```
+npm install
 npm run dev
+```
 
-Server will start at:
+Server starts at:
 
+```
 http://localhost:5000
+```
+
+---
 
 ## 2️⃣ Start Frontend (React)
 
-## Navigate to frontend folder:
+Open a new terminal:
 
+```
 cd frontend
 npm install
 npm run dev
+```
 
-## Frontend runs at:
+Frontend runs at:
 
+```
 http://localhost:5173
-📤 API Endpoint
-POST /extract
+```
+
+Open in browser.
+
+---
+
+# 📤 API Endpoint
+
+### POST `/extract`
 
 Send JSON request:
 
+```
 {
   "image": "BASE64_STRING"
 }
+```
 
 Response:
 
+```
 {
   "vendor_name": "",
   "invoice_number": "",
@@ -212,113 +327,111 @@ Response:
     }
   ]
 }
+```
 
-## 📊 CSV Export (NEW)
+---
+
+# 📊 CSV Export
 
 After extraction, users can:
 
-View invoice data in table format
+* View invoice data in table format
+* Click **Download CSV**
+* Export invoice data to Excel
 
-Click Download CSV
-Export invoice data to Excel
 Example CSV columns:
 
-Vendor Name
-Invoice Number
-Invoice Date
-Buyer Name
-GST Number
-Total Amount
-Tax Amount
-Item Description
-Quantity
-Unit Price
-Item Total
+* Vendor Name
+* Invoice Number
+* Invoice Date
+* Buyer Name
+* GST Number
+* Total Amount
+* Tax Amount
+* Item Description
+* Quantity
+* Unit Price
+* Item Total
+
+---
+
+# 📂 Project Structure
 
 ```
-📂 Project Structure
-│invoice-to-json
+invoice-to-json/
 │
-├── src
+├── src/
 │   ├── server.ts
 │   ├── temp/
-│   └── output/
 │
-├── frontend
-│   ├── node_modules/
-│   ├── src
+├── frontend/
+│   ├── src/
 │   │   ├── components/
-│   │   │                  ├── InvoiceExtractor.jsx
-│   │   │                  └── SplashScreen.jsx
-│   │   ├── App.jsx
-│   │   ├── index.css
+│   │   │   ├── InvoiceExtractor.jsx
+│   │   │   └── SplashScreen.jsx
 │   │   └── main.jsx
-│   │
-│   ├── index.html
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── eslint.config.js
-│   ├── postcss.config.js
-│   ├── tailwind.config.js
-│   └── vite.config.js
-│
-├── ocr_env/
-│
-├── output/
 │
 ├── ocr.py
-├── eng.traineddata
 ├── requirements.txt
-├── package.json
-├── package-lock.json
-├── tsconfig.json
 ├── .env
+├── package.json
+├── tsconfig.json
 └── README.md
 ```
-## ⚠️ Common Errors
-PaddleOCR / numpy conflicts
 
-Use exact versions from requirements.txt.
+---
 
-PDF conversion errors
+# ⚠️ Common Errors
 
-Ensure Poppler is added to PATH.
+### OCR errors
 
-Model API errors
+Ensure Python environment is activated:
 
-Verify:
+```
+source ocr_env/bin/activate
+```
 
+### PDF conversion error
+
+Install Poppler:
+
+```
+sudo apt install poppler-utils
+```
+
+### API errors
+
+Verify `.env` contains:
+
+```
 OPENROUTER_API_KEY
 AI_MODEL
+```
 
-in .env.
+---
 
-## 💡 Future Improvements
+# 💡 Future Improvements
 
-Multi-page PDF support
+* Multi-page PDF support
+* Batch invoice processing
+* Database storage
+* Authentication
+* Cloud deployment (Render / Railway / AWS)
+* AI model optimization
+* Drag-and-drop upload
+* Invoice analytics dashboard
 
-Batch invoice processing
+---
 
-Database storage
+# ⭐ Project Summary
 
-Authentication
+Smart Invoice Extractor is a **full-stack AI application** that converts invoices into structured data using:
 
-Cloud deployment (Render / Railway / AWS)
-
-AI model optimization
-
-Drag-and-drop upload
-
-Invoice analytics dashboard
-
-## ⭐ Project Summary
-
-Smart Invoice Extractor is a full-stack AI application that converts invoices into structured data using:
-
-OCR + AI + Modern Web UI
+**OCR + AI + Modern Web UI**
 
 Workflow:
 
+```
 Invoice Image/PDF
       ↓
 OCR (PaddleOCR)
@@ -328,13 +441,11 @@ AI Processing (OpenRouter LLM)
 Structured JSON
       ↓
 Downloadable CSV
+```
 
 Perfect for:
 
-Finance automation
-
-Accounting systems
-
-Invoice processing pipelines
-
-AI document extraction systems 
+* Finance automation
+* Accounting systems
+* Invoice processing pipelines
+* AI document extraction systems
