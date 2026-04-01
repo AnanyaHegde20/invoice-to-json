@@ -468,7 +468,7 @@ Then run - docker-compose restart app
 
 # 📂 Project Structure
 
-```
+
 invoice-to-json/
 │
 ├── src/
