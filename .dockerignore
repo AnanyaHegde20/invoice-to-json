@@ -1,0 +1,9 @@
+node_modules
+ocr_env
+temp
+output
+.git
+.gitignore
+.env
+paddle_models
+output

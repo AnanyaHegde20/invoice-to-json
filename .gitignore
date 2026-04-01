@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+ocr_env/
+venv/
+env/
+
+# Node (used in backend)
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# ML / OCR models
+paddle_models/
+
+# Output / temp files
+output/
+temp/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker (optional but useful)
+*.pid
+*.seed
+
+# Database
+*.db
+*.sqlite3
+
+# Coverage / testing
+.coverage
+htmlcov/
