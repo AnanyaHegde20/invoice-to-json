@@ -476,8 +476,9 @@ Then run - docker-compose restart app
 
 ```
 
-# 📂 Project Structure
+## 📂 Project Structure
 
+```
 
 invoice-to-json/
 │
