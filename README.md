@@ -537,12 +537,12 @@ sudo apt install poppler-utils
 
 Verify `.env` contains:
 
-```
+
 OPENROUTER_API_KEY
 AI_MODEL
 
-```
 
+```
 
 # 💡 Future Improvements
 
@@ -557,7 +557,7 @@ AI_MODEL
 * Drag-and-drop upload
 * Invoice analytics dashboard
 
-
+```
 
 # ⭐ Project Summary
 
