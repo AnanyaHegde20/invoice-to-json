@@ -561,11 +561,13 @@ AI_MODEL
 
 # ⭐ Project Summary
 
-```
+
 
 Smart Invoice Extractor is a **full-stack AI application** that converts invoices into structured data using:
 
 **OCR + AI + Modern Web UI**
+
+
 
 Workflow:
 
