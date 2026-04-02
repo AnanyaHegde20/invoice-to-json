@@ -323,23 +323,26 @@ Backend → http://localhost:5000
 Adminer → http://localhost:8080
 
 # ▶️ Run the Project with below steps only in Ubuntu and normal windows 
+```
 
 ## 1️⃣ Start Backend Server
 
 From project root:
 
 ```
+
 npm install
 npm run dev
+
 ```
 
 Server starts at:
 
 ```
-http://localhost:5000
-```
 
----
+http://localhost:5000
+
+```
 
 ## 2️⃣ Start Frontend (React)
 
@@ -349,6 +352,7 @@ Open a new terminal:
 cd frontend
 npm install
 npm run dev
+
 ```
 
 Frontend runs at:
@@ -359,7 +363,7 @@ http://localhost:5173
 
 Open in browser.
 
----
+
 
 # 📤 API Endpoint
 
@@ -475,7 +479,7 @@ Then run - docker-compose restart app
 # 📂 Project Structure
 
 
-
+```
 
 invoice-to-json/
 │
