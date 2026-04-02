@@ -515,7 +515,7 @@ invoice-to-json/
 
 # ⚠️ Common Errors
 
-```
+
 
 ### OCR errors
 
@@ -523,6 +523,7 @@ Ensure Python environment is activated:
 
 ```
 source ocr_env/bin/activate
+
 ```
 
 ### PDF conversion error
@@ -531,6 +532,7 @@ Install Poppler:
 
 ```
 sudo apt install poppler-utils
+
 ```
 
 ### API errors
