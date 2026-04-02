@@ -470,6 +470,8 @@ CREATE TABLE line_items (
 
 Then run - docker-compose restart app
 
+```
+
 # 📂 Project Structure
 
 
