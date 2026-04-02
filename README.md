@@ -395,9 +395,11 @@ Response:
 }
 ```
 
----
+
 
 # 📊 CSV Export
+
+```
 
 After extraction, users can:
 
@@ -419,9 +421,11 @@ Example CSV columns:
 * Unit Price
 * Item Total
 
----
+
 
 🗄️ Database Setup (🔥 NEW)
+
+```
 
 * We integrated MySQL (Dockerized) to store extracted invoice data.
 
@@ -468,6 +472,8 @@ Then run - docker-compose restart app
 
 # 📂 Project Structure
 
+```
+
 
 invoice-to-json/
 │
@@ -500,9 +506,10 @@ invoice-to-json/
 └── README.md
 
 
----
 
 # ⚠️ Common Errors
+
+```
 
 ### OCR errors
 
@@ -527,11 +534,13 @@ Verify `.env` contains:
 ```
 OPENROUTER_API_KEY
 AI_MODEL
+
 ```
 
----
 
 # 💡 Future Improvements
+
+```
 
 * Multi-page PDF support
 * Batch invoice processing
@@ -542,9 +551,11 @@ AI_MODEL
 * Drag-and-drop upload
 * Invoice analytics dashboard
 
----
+
 
 # ⭐ Project Summary
+
+```
 
 Smart Invoice Extractor is a **full-stack AI application** that converts invoices into structured data using:
 
