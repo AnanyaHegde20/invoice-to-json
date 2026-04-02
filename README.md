@@ -472,7 +472,7 @@ Then run - docker-compose restart app
 
 # 📂 Project Structure
 
-```
+
 
 
 invoice-to-json/
@@ -505,7 +505,7 @@ invoice-to-json/
 ├── tsconfig.json
 └── README.md
 
-```
+
 
 
 # ⚠️ Common Errors
