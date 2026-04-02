@@ -425,7 +425,7 @@ Example CSV columns:
 * Unit Price
 * Item Total
 
-
+```
 
 🗄️ Database Setup (🔥 NEW)
 
@@ -477,8 +477,6 @@ Then run - docker-compose restart app
 ```
 
 # 📂 Project Structure
-
-
 
 
 invoice-to-json/
