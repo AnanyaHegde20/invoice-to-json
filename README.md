@@ -582,6 +582,8 @@ Structured JSON
       ↓
 Downloadable CSV
 
+```
+
 Perfect for:
 
 ```
