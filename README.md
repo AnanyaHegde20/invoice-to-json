@@ -562,9 +562,10 @@ AI Processing (OpenRouter LLM)
 Structured JSON
       ↓
 Downloadable CSV
-```
 
 Perfect for:
+
+```
 
 * Finance automation
 * Accounting systems
