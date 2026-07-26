@@ -48,4 +48,3 @@ Thumbs.db
 .coverage
 htmlcov/
 
-docker-compose.yml
