@@ -12,7 +12,7 @@ services:
     environment:
       PORT: 5000
       AI_MODEL: openai/gpt-4o-mini
-      OPENROUTER_API_KEY: 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
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
 
       # ✅ ADD THESE FOR DATABASE
       DB_HOST: mysql

@@ -7,9 +7,11 @@ import path from "path";
 import fs from "fs";
 import sharp from "sharp";
 import { execSync } from "child_process";
-import { processInvoiceAgent } from "./services/agentService";
+import { processAgent } from "./services/agentService";
+import { classifyDocument } from "./services/classifierService";
 import { saveInvoiceData } from "./services/dbService";
 import { db } from "./db"; 
+
 
 dotenv.config();
 const app = express();
